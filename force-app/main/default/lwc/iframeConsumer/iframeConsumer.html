@@ -1,0 +1,19 @@
+<template>
+  <div class="slds-grid slds-gutters slds-wrap">
+    <div class="slds-col slds-size_1-of-1 slds-m-bottom_small">
+      <p class="slds-box slds-theme_default">
+        Current iframe URL is: <strong>{currentIframeUrl}</strong>
+      </p>
+    </div>
+    <div class="slds-col slds-size_1-of-1">
+      <div class="container">
+        <iframe
+          src={iframeSrc}
+          class="responsive-iframe"
+          width="100%"
+          height="600px"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</template>
