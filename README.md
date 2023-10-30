@@ -1,10 +1,14 @@
 # LWC iframe communication
 
-This project demonstrates how consume `postMessage()` browser api calls from a child iframe. This work builds upon Christophe Coenraets work in [Salesforce Developers Blog - Communicating between Lightning Components and Visualforce Pages](https://developer.salesforce.com/blogs/developer-relations/2017/01/lightning-visualforce-communication)
+This project demonstrates how consume `postMessage()` browser api calls from a child iframe. This work builds upon Christophe Coenraets work in [Salesforce Developers Blog - Communicating between Lightning Components and Visualforce Pages](https://developer.salesforce.com/blogs/developer-relations/2017/01/lightning-visualforce-communication).
 
-In this example, a static website sends a `postMessage()` call upon each page load. The call includes a simple object that contains the url of the current page. Upon receipt of this call, the `currentIframeUrl` variable is updated and printed to the parent LWC component.
+In this example, a static website sends a `postMessage()` call upon each page load. The call includes a simple object that contains the url of the current page `{location: url}`. Upon receipt of this call, the `currentIframeUrl` variable is updated and printed to the parent LWC component.
 
 ![screen recording showing user navigating across pages in the iframe and the iframes URL being updated in the parent LWC](assets/demo.gif)
+
+## Platform Cache
+
+In addition to consuming the URL of the current page, the url is written to the session cache. This enables a user to navigate to another Salesforce tab and then pickup where they left off in the iframed content.
 
 ## Setup and Deployment
 

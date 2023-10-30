@@ -10,7 +10,7 @@
     </targets>
     <targetConfigs>
         <targetConfig targets="lightning__HomePage,lightning__AppPage,lightning__RecordPage">
-            <property name="iframeSrc" type="String" default="https://mvogelgesang.github.io/astroIframe/" />
+            <property name="defaultSrc" type="String" default="https://mvogelgesang.github.io/astroIframe/" />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
